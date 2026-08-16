@@ -10,8 +10,7 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                bat 'docker-compose up -d db'
-                bat 'docker-compose run --rm app'
+                bat 'docker-compose run --rm --no-deps app'
             }
         }
     }
