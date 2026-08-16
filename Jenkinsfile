@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                bat 'docker-compose run --rm --no-deps app'
+                bat 'docker-compose up -d --no-recreate app'
             }
         }
     }

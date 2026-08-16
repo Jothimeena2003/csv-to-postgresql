@@ -13,7 +13,7 @@ print(df)
 
 # Connect to PostgreSQL
 connection = psycopg2.connect(
-    host="postgres_db",
+    host="db",
     database="mydatabase",
     user="admin",
     password="password",
