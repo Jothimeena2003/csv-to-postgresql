@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                bat 'docker-compose up -d --no-recreate app'
+                bat 'docker run --rm --network csvtopostgresql_default -v "%WORKSPACE%\\data:/data" csv-to-postgresql-app:latest'
             }
         }
     }
