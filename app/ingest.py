@@ -38,6 +38,7 @@ for _, row in df.iterrows():
         """
         INSERT INTO employees (id, name, department, salary)
         VALUES (%s, %s, %s, %s)
+        ON CONFLICT (id) DO NOTHING
         """,
         (
             int(row["id"]),
